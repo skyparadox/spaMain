@@ -1,0 +1,26 @@
+
+.zbiorczy_kafelki.number2
+	.lewy_obraz
+		img(src="/assets/addons/timthumb.php?src=[[ImagePlus? &tvname=`oferta_mainPhoto3_tv` &type=`tpl` &tpl=`imageplusSRC` &docid=`[[*id]]` ]]&w=1000&h=500&zc=1&q=100&s=1", alt="PRESTIZ ZDJECIE")
+		.prawy_obraz
+			img(src="/assets/addons/timthumb.php?src=[[ImagePlus? &tvname=`oferta_mainPhoto4_tv` &type=`tpl` &tpl=`imageplusSRC` &docid=`[[*id]]` ]]&w=1000&h=500&zc=1&q=100&s=1", alt="PRESTIZ ZDJECIE")
+		//- .prawy_gora
+		//- 	.wr
+		//- 		img(src="[[*platek2]]", alt="PRESTIZ ZDJECIE")
+//- [[$migxInMigx]]
+
+.content.kafInCon(class="liczba-[[+text3]]")
+	.koncowy_kaf
+		.kafelek_liczba
+			span.liczba [[+text3]]
+
+			.line1.line
+		.koncowy_title
+			span.turkus [[+text1]]
+		.koncowy_opis
+			span [[+text2]]
+
+		.tabelka_wrapper
+			| [[getImageList?
+			| &value=`[[+submigx]]`
+			| &tpl=`migxInside`]]

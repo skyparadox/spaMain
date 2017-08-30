@@ -1,0 +1,70 @@
+| [[$header]]
+| [[$nav]]
+
+
+
+//-SLIDER
+| [[$sliderMain]]
+//- liscie
+section
+	.liscie_wrapper.prawa.onas
+		.liscie
+			img(src="/MEDIA/SITEFILES/liscie.png", alt="PRESTIZ liście")
+//-kafelki duze =====================
+section
+	.content
+		.kafelki_wrapper.onas-kafelki.
+			[[getImageList?
+			&tvname=`home_kafelki_tv`
+			&tpl=`kafelek1n`
+			&limit=`3`
+			&docid=`[[*id]]`
+			]]
+//- liscie=====================
+
+
+//- //-zespol=====================
+section
+	.content.onas
+		.zespol_gora
+			.kafelek_liczba
+				span.liczba [[*onas_text2_tv]]
+				.kafelek_title
+					span [[*onas_text1_tv]]
+				.line1.line
+				.line2.line
+			.zespol_opis
+				span [[*onas_text3_tv]]
+		.zespol_wrapper.
+			[[getImageList?
+			&tvname=`onas_textmigxZespol_tv`
+			&tpl=`kafelek2n`
+			&docid=`[[*id]]`
+			]]
+//- galeria
+section
+	.content
+		.title_galeriahome
+			h2.turkus GALERIA
+			a.linkGAL(href="/galeria.html")
+				span Zapraszamy do naszej galerii...
+		.galeria_home_wrapper
+			| [[getImageList?
+			| &tvname=`galeriaMigx`
+			| &tpl=`@CODE:
+			.imgGal(data-src="[[+image]]")
+				img(src="/assets/addons/timthumb.php?src=[[+image]]&w=370&h=235&zc=1&q=100&s=1", alt="galeria PRESTIZ")
+			| `
+			| &docid=`[[*id]]`
+			| &where=`{"published":"1"}`
+			| ]]
+
+
+
+//- section(style="height:1000px")
+section
+	.liscie_wrapper
+		.liscie
+			img(src="/MEDIA/SITEFILES/liscie-2.png", alt="PRESTIZ liście")
+| [[$footerChunk]]
+| [[$footer]]

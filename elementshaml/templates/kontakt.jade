@@ -1,0 +1,67 @@
+| [[$header]]
+| [[$nav]]
+
+
+
+//-SLIDER
+| [[$sliderMain]]
+//- liscie
+section
+	.liscie_wrapper.prawa.onas
+		.liscie
+			img(src="/MEDIA/SITEFILES/liscie.png", alt="PRESTIZ liście")
+//- kontakt
+section
+	.content
+		.kontakt_wrap
+			.kontakt_left
+				.kafelek_liczba
+
+					i.fa.fa-envelope-open.fontAwesLiczba
+					.kafelek_title
+						span [[*pagetitle]]
+					.line1.line
+					.line2.line
+				.kafelek_l_tekst
+					| [[*kontakt_text]]
+
+			.kontakt_right
+				//- formularz===============================
+				.container-formularz
+					.container-form-wrap
+						form.formularz2(name="formularzyk" action="javascript:;" method="post" autocomplete="off")
+
+							input(type="hidden" name="myemail" value="[[*kontakt_email]]" )
+							input(type="hidden" name="mysubject" value="Email ze strony [[++site_url]]" )
+							.input_wrapp
+
+								.imie
+									input.input(type="text" name="name" placeholder="Imię" required)
+								.nazwisko
+									input.input(type="text" name="surname" placeholder="Nazwisko" required)
+								.mail
+									input.input(type="email" name="email" placeholder="E-mail" required )
+								.tresc
+									textarea.input(class="czcionka" name="message"  placeholder="Wiadomość" required)
+
+							.button-container.buttony
+
+								.button-send
+
+									input.submit(type="submit" value="wyslij")
+									span.success.hide
+
+
+section
+
+	| [[$mapa]]
+
+
+//- section
+//- 	.liscie_wrapper
+//- 		.liscie
+//- 			img(src="/MEDIA/SITEFILES/liscie-2.png", alt="PRESTIZ liście")
+| [[$footerChunk]]
+| [[$footer]]
+
+

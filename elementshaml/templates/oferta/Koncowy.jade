@@ -1,0 +1,64 @@
+| [[$header]]
+| [[$nav]]
+
+
+
+//-SLIDER
+
+| [[$sliderMain]]
+//- sciezka okruszkow====================
+section
+	.content
+		.path
+			|[[Breadcrumbs? &crumbSeparator=`>>`]]
+
+
+
+
+//-kafelki duze =====================
+
+
+section
+
+
+	.koncowy_kaf_wrapper
+		| [[!getImageList?
+		| &tvname=`koncowy_kafelki_tv`
+		| &tpl=`migxInMigx`
+		| &tpl_2=`pierwszyKoncowy`
+		| &tpl_4=`koncowyKoncowy`
+		| &docid=`[[*id]]`
+		| ]]
+//- galeria
+| [[*galeriaMigx:is=``:else=`
+section
+	.content
+		.title_galeriahome
+			h2.turkus GALERIA
+			a.linkGAL(href="/galeria.html")
+				span Zapraszamy do naszej galerii...
+		.galeria_home_wrapper
+			| [[getImageList?
+			| &tvname=`galeriaMigx`
+			| &tpl=`@CODE:
+			.imgGal(data-src="[[+image]]")
+				img(src="/assets/addons/timthumb.php?src=[[+image]]&w=370&h=235&zc=1&q=100&s=1", alt="galeria PRESTIZ")
+			| `
+			| &docid=`[[*id]]`
+			| &where=`{"published":"1"}`
+			| ]]
+| `]]
+
+
+
+
+
+//- section(style="height:1000px")
+| [[*trawka_dol_prawa:is=``:else=`
+section
+	.liscie_wrapper.prawa.ofertaTrawka
+		.liscie
+			img(src="[[*trawka_dol_prawa]]", alt="PRESTIZ liście")
+| `]]
+| [[$footerChunk]]
+| [[$footer]]

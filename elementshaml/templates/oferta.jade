@@ -1,0 +1,50 @@
+| [[$header]]
+| [[$nav]]
+
+
+
+//-SLIDER
+| [[$sliderMain]]
+
+//-kafelki duze =====================
+//- section
+//- 	.liscie_wrapper.oferta
+//- 		.liscie
+//- 			img(src="/MEDIA/SITEFILES/liscie-2.png", alt="PRESTIZ liście")
+
+section
+	.content
+		.kafelki_wrapper.oferta_kaf.
+			[[getResources:default='Nothing found'?
+			&tpl=`kafelekOferta`
+			&includeContent=`0`
+			&showUnpublished=`0`
+			&parents=`[[*id]]`
+			&includeTVs=`1`
+			&limit=`0`
+			&depth=`0`
+			&tvPrefix=``
+			&showHidden=`1`
+			&sortby=`menuindex`
+			&sortdir=`ASC`
+
+			]]
+//- liscie=====================
+section
+	.liscie_wrapper.prawa.oferta
+		.liscie
+			img(src="/MEDIA/SITEFILES/liscie.png", alt="PRESTIZ liście")
+//- liscie=====================
+
+section
+	.liscie_wrapper.oferta
+		.liscie
+			img(src="/MEDIA/SITEFILES/liscie-2.png", alt="PRESTIZ liście")
+
+
+
+
+//- section(style="height:1000px")
+
+| [[$footerChunk]]
+| [[$footer]]

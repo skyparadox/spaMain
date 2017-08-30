@@ -1,0 +1,29 @@
+
+
+//- // div od menu=============
+
+.MainMenu
+
+	.menu_wrapper
+		//- a.openmm(href = "#my-menu") <i class="fa fa-bars"></i>
+		a.img_wrapper(href="/")
+
+			img.lgo(src="[[getResourceField? &id=`1` &field=`imageLogo1_tv` &processTV=`1`]]", alt="Logo")
+		nav
+			.burger
+				i.fa.fa-bars
+			ul
+				[[pdoMenu?
+				&parents=`0`
+				&level=`1`
+				&tplOuter=`@INLINE [[+wrapper]]`
+				&tplInner=`@INLINE [[+wrapper]]`
+				&rowTpl=`@INLINE
+				li([[+classes]]="")
+					a.menulink(href="[[+link]]" title="[[+title]]")
+						[[+menutitle]]
+					.trinMenu
+				| `
+				//- &countChildren=`1`
+				]]
+

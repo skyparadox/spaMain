@@ -1,0 +1,21 @@
+.kafelek_wrapper
+	.kafelek_left_w
+		img(src="/assets/addons/timthumb.php?src=[[+image]]&w=570&h=450&zc=1&q=100&s=1", alt="PRESTIZ kafelek photo")
+	.kafelek_right_w
+		.kafelek_liczba
+
+			i.fontAwesLiczba.fa(class="[[+text3]] liczba-0[[+idx]]")
+			.kafelek_title
+				span [[+text1]]
+			.line1.line
+			.line2.line
+		.secTitle
+			h4.turkus [[+text1new]]
+		.kafelek_opis
+			span [[+text2]]
+
+		| [[+link:isnot=``:then=`
+		a.kafelek_wiecej(href="[[+link]]")
+			span [[+text4]]
+		| `]]
+

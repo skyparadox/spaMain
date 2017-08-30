@@ -1,0 +1,52 @@
+doctype html
+<html lang="PL-pl" >
+head
+
+	meta(charset="utf-8")
+	base(href="[[!++site_url]]")
+	meta(name="viewport" content="width=device-width, initial-scale=1.0" )
+	meta(name="description" content="[[++site_name]] - [[*pagetitle]]")
+
+	//- script.
+	//- 	 function tb8_makeArray(n){ this.length = n; return this.length; } tb8_messages = new tb8_makeArray(3); tb8_messages[0] = "[[++site_name]] - [[*pagetitle]]"; tb8_messages[1] = "[[++site_name]] - [[*pagetitle]]"; tb8_messages[2] = "[[++site_name]] - [[*pagetitle]]"; tb8_messages[3] = "[[++site_name]] - [[*pagetitle]]"; tb8_messages[4] = "[[++site_name]] - [[*pagetitle]]"; tb8_messages[5] = "[[++site_name]] - [[*pagetitle]]";
+	//- 	tb8_messages[6] = "[[++site_name]] - [[*pagetitle]]"; tb8_rptType = 'infinite'; tb8_rptNbr = 5; tb8_speed = 100; tb8_delay = 2000; var tb8_counter=1; var tb8_currMsg=0; var tb8_tekst =""; var tb8_i=0; var tb8_TID = null; function tb8_pisi(){ tb8_tekst = tb8_tekst + tb8_messages[tb8_currMsg].substring(tb8_i, tb8_i+1); document.title = tb8_tekst; tb8_sp=tb8_speed; tb8_i++; if (tb8_i==tb8_messages[tb8_currMsg].length){ tb8_currMsg++; tb8_i=0; tb8_tekst="";tb8_sp=tb8_delay; } if (tb8_currMsg == tb8_messages.length){ if ((tb8_rptType == 'finite') && (tb8_counter==tb8_rptNbr)){ clearTimeout(tb8_TID); return; } tb8_counter++; tb8_currMsg = 0; } tb8_TID = setTimeout("tb8_pisi()", tb8_sp); } tb8_pisi()
+
+	title [[++site_name]] - [[*pagetitle]]
+
+	//- fonty==================================
+
+	script.
+		function loadCSS(e, t, n) { "use strict"; var i = window.document.createElement("link"); var o = t || window.document.getElementsByTagName("script")[0]; i.rel = "stylesheet"; i.href = e; i.media = "only x"; o.parentNode.insertBefore(i, o); setTimeout(function () { i.media = n || "all" }) }
+
+
+		//- load css file async
+		//- loadCSS("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+		//- loadCSS('/assets/addons/async/jquery-ui.css')
+		//- loadCSS('/assets/addons/async/quil.css')
+		loadCSS('/assets/addons/owl2/swiper.min.css')
+		loadCSS('/assets/addons/cookiebar/jquery.cookiebar.css')
+		loadCSS('/assets/addons/lightgallery/lightgallery.css')
+
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+
+	//- -# dodatki=====================================
+	//- <link rel="stylesheet" href="/assets/addons/owl2/swiper.min.css">
+
+	//- link(rel = "stylesheet" href = "/assets/addons/cookiebar/jquery.cookiebar.css")
+
+	//- link(rel="stylesheet", href="/assets/addons/lightgallery/lightgallery.css")
+	script(src="/assets/addons/jquery.js")
+
+
+	//- -# modalne
+	link(rel="stylesheet" href="/assets/css/app1.css")
+
+
+
+<body>
+<div class="bodyWrapper">
+
+
+
+

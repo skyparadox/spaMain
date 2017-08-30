@@ -1,0 +1,55 @@
+
+.map_wrapper
+div.mapaMarket(id="mapa[[*id]]" style="height:500px; width:100%;")
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmrEKL1G0YdIRwWfDgx5N518RhR82pkCA"></script>
+script.
+
+	(function() {
+		styles=[{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#cbd4d8"},{"visibility":"on"}]}]
+	  var mapaIgnite;
+
+	  mapaIgnite = function() {
+	    var isDraggable, maper, ref;
+	    isDraggable = (ref = $(window).width() > 800) != null ? ref : {
+	      "true": false
+	    };
+	    maper = function() {
+	      var createMarker, field, id, infoWindow, mapOptions, mapka, markers, processTV;
+	      mapOptions = {
+	        zoom: 16,
+	        scrollwheel: false,
+	        draggable: isDraggable,
+	        center: new google.maps.LatLng([[*mapa_lat_tv]],[[*mapa_long_tv]])
+	      };
+
+	      mapka = new google.maps.Map(document.getElementById('mapa[[*id]]'), mapOptions);
+	      markers = [];
+	      infoWindow = new google.maps.InfoWindow();
+	      createMarker = function() {
+	        var marker, openInfoWindow;
+	        marker = new google.maps.Marker({
+	          map: mapka,
+	          animation: google.maps.Animation.BOUNCE,
+	          position: new google.maps.LatLng([[*mapa_lat_tv]],[[*mapa_long_tv]]),
+	          title: "[[*mapa_Tytul_tv]]"
+	        });
+	        marker.content = '<div class="infoWindowContent"> <br> <span>[[*mapa_Opis_tv:strip]]';
+	        google.maps.event.addListener(marker, 'click', function() {
+	          infoWindow.setContent('<h4 class="red">' + marker.title + '</h4>' + marker.content);
+	          return infoWindow.open(mapka, marker);
+	        });
+	        markers.push(marker);
+	        return openInfoWindow = function(e, selectedMarker) {
+	          e.preventDefault();
+	          return google.maps.event.trigger(selectedMarker, 'click');
+	        };
+	      };
+	      mapka.setOptions({styles: styles});
+	      return createMarker();
+	    };
+	    return maper();
+	  };
+	  mapaIgnite();
+
+	}).call(this);

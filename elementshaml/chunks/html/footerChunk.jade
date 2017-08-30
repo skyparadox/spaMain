@@ -1,0 +1,41 @@
+
+
+
+footer
+	.content
+		.footerlinia
+			.logoFoot
+				img(src="/MEDIA/SITEFILES/logo-biale.png", alt="PRESTIZ logo biale")
+			.foot_wrap
+
+				.foot-column
+					span [[getResourceField? &id=`1` &field=`footer_texa1_tv` &processTV=`1`]]
+				.foot-column
+					span [[getResourceField? &id=`1` &field=`footer_texa2_tv` &processTV=`1`]]
+				.foot-column.akc
+					span Akceptujemy:
+					.imgw
+						img(src="/MEDIA/SITEFILES/visa-itp.png", alt="PRESTIZ visa")
+			.footer-newsletter
+				.newsletter-container-flex
+					form.formcontainer(name="formularzyk" action="javascript:;" methosd="post" autocomplete="off")
+						.input-text
+							input.texxt(type="email" name="emailTo" placeholder="wpisz email" required)
+						input(type="hidden" name="ApiKey" value="[[getResourceField? &id=`1` &field=`ApiKey_tv` &processTV=`1`]]")
+						input(type="hidden" name="ApiSecret" value="[[getResourceField? &id=`1` &field=`ApiSecret_tv` &processTV=`1`]]")
+						input(type="hidden" name="ListHash" value="[[getResourceField? &id=`1` &field=`ListHash_tv` &processTV=`1`]]")
+						.input-submit
+							input.submit(type="submit" value="SUBSKRYBUJ" )
+							i.fa.fa-caret-right
+						span.success
+
+
+
+						//- span SUBSCRIBE
+					.linia.linia-newsletter
+
+
+
+		.footer
+			span Handcrafted by
+			a(href="http://hackadesign.com" target="_blank")&nbsp; Hacka Design

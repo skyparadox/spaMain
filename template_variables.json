@@ -1,0 +1,937 @@
+[
+	{
+		"name": "imageLogo1_tv",
+		"caption": "Logo",
+		"type": "image",
+		"category":"Ustawienia",
+		"template_access": ["Home"]
+	},
+
+	{
+		"name": "home_slider_migx_tv",
+		"caption": "Slider",
+		"type": "migx",
+		"category": "SLIDER",
+		"template_access": ["Home","onas","oferta","Zbiorczy","Koncowy","bonyUpominkowe","nowosci" , "kontakt", "galeria","textowa"],
+		"input_properties": {
+			"formtabs":[
+						{
+						"caption": "ZDJECIA",
+						"fields": [
+									{
+									"field": "image",
+									"caption": "Zdjęcie",
+									"description":"1920x500",
+									"inputTVtype": "image",
+									"sourceFrom":"migx"
+									},
+									{
+									"field": "link",
+									"caption": "Link",
+									"inputTVtype": "text"
+									},
+									{
+									"field": "ofertaIDslide",
+									"caption": "Do którego elementu w ofercie ma zjechac",
+									"description":"np.03",
+									"inputTVtype": "text"
+									}
+
+
+
+								]
+						}
+					],
+		     "columns":[
+						{
+						"header": "Zdjęcie",
+						"width": "100",
+						"sortable": "false",
+						"dataIndex": "image",
+						"renderer": "this.renderImage"
+						},
+						{
+						"header": "Link",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "link"
+						}
+						,
+						{
+						"header": "Element w ofercie",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "ofertaIDslide"
+						}
+
+
+					],
+			"btntext": "Dodaj Zdjęcie",
+			"autoResourceFolders": "false"
+		}
+	},
+	{
+		"name": "home_sliderText",
+		"caption": "Polożenie napisow",
+		"type": "listbox",
+
+		"elements": "lewo==lewa||prawo==prawa",
+		"default_text": "lewa"
+
+	},
+
+	{
+		"name": "home_kafelki_tv",
+		"caption": "kafelki",
+		"type": "migx",
+		"rank":"1",
+		"category": "Kafelki",
+		"template_access": ["Home","onas"],
+		"input_properties": {
+			"formtabs":[
+						{
+						"caption": "ZDJECIA",
+						"fields": [
+									{
+									"field": "image",
+									"caption": "Zdjęcie",
+									"description":"550x360",
+									"inputTVtype": "image",
+									"sourceFrom":"migx"
+									},
+									{
+									"field": "text1",
+									"caption": "Nagłówek",
+									"inputTVtype": "text"
+									},
+									{
+									"field": "text2",
+									"caption": "Opis",
+									"inputTVtype": "richtext"
+									},
+									{
+									"field": "text3",
+									"caption": "Liczba",
+									"inputTVtype": "text"
+									},
+									{
+									"field": "text4",
+									"caption": "wiecej tekst",
+									"inputTVtype": "text"
+									},
+									{
+									"field": "link",
+									"caption": "Link",
+									"inputTVtype": "text"
+									}
+
+
+								]
+						}
+					],
+		     "columns":[
+						{
+						"header": "Zdjęcie",
+						"width": "100",
+						"sortable": "false",
+						"dataIndex": "image",
+						"renderer": "this.renderImage"
+						},
+						{
+						"header": "Nagłówek",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "text1"
+						},
+						{
+						"header": "Opis",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "text2"
+						}
+					],
+			"btntext": "Dodaj Kafelek",
+			"autoResourceFolders": "false"
+		}
+	},
+
+	{
+		"name": "footer_texa1_tv",
+		"caption": "Tekst 1 kolumna",
+		"type": "richtext",
+		"rank":"1",
+		"category":"stopka",
+		"template_access": ["Home"]
+	},
+	{
+		"name": "footer_texa2_tv",
+		"caption": "tekst 2 kolumna",
+		"type": "richtext",
+		"rank":"2",
+	  "category":"stopka",
+		"template_access": ["Home"]
+	},
+	{
+		"name": "ApiKey_tv",
+		"caption": "ApiKey",
+		"type": "text",
+	  	"category":"Fresh Mail",
+		"template_access": ["Home"]
+	},
+	{
+		"name": "ApiSecret_tv",
+		"caption": "ApiSecret",
+		"type": "text",
+	  "category":"Fresh Mail",
+		"template_access": ["Home"]
+	},
+	{
+		"name": "ListHash_tv",
+		"caption": "ListHash",
+		"type": "text",
+	  "category":"Fresh Mail",
+		"template_access": ["Home"]
+	},
+
+
+	{
+		"name": "onas_text1_tv",
+		"caption": "Tekst glówny",
+		"rank":"1",
+		"type": "text",
+	  "category":"Zespół",
+		"template_access": ["onas"]
+	},{
+		"name": "onas_text2_tv",
+		"caption": "liczba",
+		"rank":"2",
+		"type": "text",
+	  "category":"Zespół",
+		"template_access": ["onas"]
+	},{
+		"name": "onas_text3_tv",
+		"caption": "opis",
+		"rank":"3",
+		"type": "textarea",
+	  "category":"Zespół",
+		"template_access": ["onas"]
+	},
+
+	{
+		"name": "onas_textmigxZespol_tv",
+		"caption": "Zespół",
+		"type": "migx",
+		"rank":"4",
+		"category": "Zespół",
+		"template_access": ["onas"],
+		"input_properties": {
+			"formtabs":[
+						{
+						"caption": "Zespół",
+						"fields": [
+									{
+									"field": "image",
+									"caption": "Zdjęcie",
+									"description":"216x316",
+									"inputTVtype": "image",
+									"sourceFrom":"migx"
+									},
+									{
+									"field": "text1",
+									"caption": "Imię nazwisko"
+
+									},
+									{
+									"field": "text2",
+									"caption": "Stanowisko"
+
+									}
+								]
+						}
+					],
+		     "columns":[
+						{
+						"header": "Zdjęcie",
+						"width": "100",
+						"sortable": "false",
+						"dataIndex": "image",
+						"renderer": "this.renderImage"
+						},
+						{
+						"header": "Imię nazwisko",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "text1"
+						},
+						{
+						"header": "Stanowisko",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "text2"
+						}
+					],
+			"btntext": "Dodaj Osobę",
+			"autoResourceFolders": "false"
+		}
+	},
+
+
+	{
+		"name": "onas_text2_tv",
+		"caption": "Liczba na stronie oferta",
+		"rank":"2",
+		"type": "text",
+	  "category":"Ustawienia",
+		"template_access": ["Zbiorczy", "Koncowy"]
+	},{
+		"name": "onas_text3_tv",
+		"caption": "Opis",
+		"rank":"3",
+		"type": "richtext",
+	  "category":"Ustawienia",
+		"template_access": ["Zbiorczy","bonyUpominkowe"]
+	},{
+		"name": "oferta_mainPhoto_tv",
+		"caption": "Zdjecie główne",
+		"rank":"4",
+		"type": "image",
+
+		"description":"700x350",
+	  "category":"Ustawienia",
+		"template_access": ["Zbiorczy", "Koncowy"]
+	},
+
+
+
+
+
+
+	{
+		"name": "platek11",
+		"caption": "Płatek 1",
+		"rank":"1",
+		"type": "image",
+
+
+	  "category":"Listki",
+		"template_access": [ "Koncowy"]
+	},
+	{
+		"name": "trawka_dol_prawa",
+		"caption": "trawka dol prawa",
+		"rank":"2",
+		"type": "image",
+	  "category":"Listki",
+		"template_access": [ "Koncowy","textowa"]
+	},
+
+
+
+	{
+		"name": "oferta_mainPhoto1_tv",
+		"caption": "Zdjecie 1",
+		"rank":"2",
+		"type": "imageplus",
+
+		"description":"1000x500",
+	  "category":"Zdjecia",
+		"template_access": [ "Koncowy"]
+	},{
+		"name": "oferta_mainPhoto2_tv",
+		"caption": "Zdjecie 2",
+		"rank":"3",
+		"type": "imageplus",
+
+		"description":"1000x500",
+	  "category":"Zdjecia",
+		"template_access": [ "Koncowy"]
+	}
+
+	,
+
+	{
+		"name": "oferta_mainPhoto3_tv",
+		"caption": "Zdjecie 3",
+		"rank":"5",
+		"type": "imageplus",
+
+		"description":"1000x500",
+	  "category":"Zdjecia",
+		"template_access": [ "Koncowy"]
+	},
+	{
+		"name": "oferta_mainPhoto4_tv",
+		"caption": "Zdjecie 4",
+		"rank":"6",
+		"type": "imageplus",
+
+		"description":"1000x500",
+	  "category":"Zdjecia",
+		"template_access": [ "Koncowy"]
+	},
+	{
+		"name": "koncowy_kafelki_tv",
+		"caption": "Kafelki",
+		"type": "migx",
+		"rank":"1",
+		"category": "Kafelki",
+		"template_access": ["Koncowy"],
+		"input_properties": {
+			"formtabs":[
+						{
+						"caption": "Teksty",
+						"fields": [
+
+									{
+									"field": "text1",
+									"caption": "Nagłówek",
+									"inputTVtype": "text"
+									},
+									{
+									"field": "text2",
+									"caption": "Opis",
+									"inputTVtype": "richtext"
+									},
+									{
+									"field": "text3",
+									"caption": "Liczba",
+									"inputTVtype": "text"
+									},
+
+									{
+									"field": "submigx",
+									"caption": "Liczba",
+									"inputTV": "koncowy_kafelkiTab_tv"
+
+
+									}
+
+
+								]
+						}
+					],
+		     "columns":[
+						{
+						"header": "Nagłówek",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "text1"
+						},
+							{
+						"header": "Liczba",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "text3"
+						},
+						{
+						"header": "Opis",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "text2"
+						}
+					],
+			"btntext": "Dodaj Kafelek",
+			"autoResourceFolders": "false"
+		}
+	},
+
+	{
+		"name": "koncowy_kafelkiTab_tv",
+		"caption": "Tabelka",
+		"type": "migx",
+
+
+		"input_properties": {
+			"formtabs":[
+						{
+						"caption": "Tabelka",
+						"fields": [
+
+									{
+									"field": "text11",
+									"caption": "Nagłówek - lewa",
+									"inputTVtype": "text"
+									},
+									{
+									"field": "text22",
+									"caption": "opis - prawa",
+									"inputTVtype": "richtext"
+									}
+
+
+								]
+						}
+					],
+		     "columns":[
+						{
+						"header": "Nagłówek - lewa",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "text11"
+						},
+						{
+						"header": "text2 - prawa",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "text22"
+						}
+					],
+			"btntext": "Dodaj Linie",
+			"autoResourceFolders": "false"
+		}
+	},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	{
+	    "name": "mailform",
+	    "caption": "Mail do formularza",
+	    "type": "text",
+	    "rank":"2",
+	    "category":"formularz",
+	    "template_access": ["bonyUpominkowe"]
+	},
+	{
+	    "name": "imienazw",
+	    "caption": "Tekst w polu do wpisania imienia i nazwiska",
+	    "type": "text",
+	    "rank":"3",
+	    "category":"formularz",
+	    "template_access": ["bonyUpominkowe"]
+	},
+	{
+	    "name": "kwotabon",
+	    "caption": "Tekst w polu do wpisania 'wpisz kwotę - wartość bonu'",
+	    "type": "text",
+
+	    "category":"bon kwotowy",
+	    "template_access": ["bonyUpominkowe"]
+	},
+	{
+	    "name": "minkwotabon",
+	    "caption": "minimalna kwota",
+	    "type": "text",
+
+	    "category":"bon kwotowy",
+	    "template_access": ["bonyUpominkowe"]
+	},
+
+
+	{
+	    "name": "imienazwOBDA",
+	    "caption": "Tekst w polu do wpisania 'imie i nazwisko obdarowanego'",
+	    "type": "text",
+	    "rank":"3",
+	    "category":"formularz",
+	    "template_access": ["bonyUpominkowe"]
+	},
+	{
+	    "name": "emailtext",
+	    "caption": "Tekst w polu do emaila",
+	    "type": "text",
+	    "rank":"4",
+	    "category":"formularz",
+	    "template_access": ["bonyUpominkowe"]
+	},
+	{
+	    "name": "phoneOBDA",
+	    "caption": "Tekst w polu do telefon",
+	    "type": "text",
+	    "rank":"5",
+	    "category":"formularz",
+	    "template_access": ["bonyUpominkowe"]
+	},
+
+	{
+	    "name": "tresctext",
+	    "caption": "Tekst w polu do wpisania treści wiadomości",
+	    "type": "text",
+	    "rank":"6",
+	    "category":"formularz",
+	    "template_access": ["bonyUpominkowe"]
+	},
+
+	{
+	    "name": "wyslijbutt",
+	    "caption": "Tekst na przycisku do wysłania",
+	    "type": "text",
+	    "rank":"7",
+	    "category":"formularz",
+	    "template_access": ["bonyUpominkowe"]
+	},
+
+	{
+	    "name": "trescDostawy",
+	    "caption": "Tekst w polu do wpisania treści Dostawy",
+	    "type": "text",
+	    "rank":"8",
+	    "category":"formularz",
+	    "template_access": ["bonyUpominkowe"]
+	},
+
+	{
+		"name": "dostawa_tv",
+		"caption": "Dostawa opcje",
+		"type": "migx",
+		 "rank":"9",
+		"category": "formularz",
+		"template_access": ["bonyUpominkowe"],
+		"input_properties": {
+			"formtabs":[
+						{
+						"caption": "Dostawa opcje",
+						"fields": [
+
+									{
+									"field": "text1",
+									"caption": "Nagłówek",
+									"inputTVtype": "image-desc"
+									},
+									{
+									"field": "text2",
+									"caption": "Kwota w zł",
+
+									"inputTVtype": "image-desc"
+									},
+									{
+									"field": "text3",
+									"caption": "Text",
+									"inputTVtype": "richtext"
+									}
+								]
+						}
+					],
+		     "columns":[
+
+						{
+						"header": "Nagłówek",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "text1"
+						},
+						{
+						"header": "Kwota w zł",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "text2"
+						}
+						,
+						{
+						"header": "Text",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "text3"
+						}
+					],
+			"btntext": "Dodaj dostawe",
+			"autoResourceFolders": "false"
+		}
+	},
+	{
+	    "name": "trescBonu",
+	    "caption": "Tekst w polu do wpisania treści Bonu",
+	    "type": "text",
+	    "rank":"10",
+	    "category":"formularz",
+	    "template_access": ["bonyUpominkowe"]
+	},
+	{
+		"name": "bon_migx_tv",
+		"caption": "bon opcje",
+		"type": "migx",
+		 "rank":"11",
+		"category": "bon upominkowy",
+		"template_access": ["bonyUpominkowe"],
+		"input_properties": {
+			"formtabs":[
+						{
+						"caption": "Dostawa opcje",
+						"fields": [
+
+									{
+									"field": "text1",
+									"caption": "Nagłówek",
+									"inputTVtype": "image-desc"
+									},
+									{
+									"field": "text2",
+									"caption": "Kwota w zł",
+									"description": "- bez kwoty stanie się działem",
+									"inputTVtype": "image-desc"
+									}
+								]
+						}
+					],
+		     "columns":[
+
+						{
+						"header": "Nagłówek",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "text1"
+						},
+						{
+						"header": "Kwota w zł",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "text2"
+						}
+					],
+			"btntext": "Dodaj bon",
+			"autoResourceFolders": "false"
+		}
+	},
+	{
+	    "name": "trescPlatnosci",
+	    "caption": "Tekst w polu do wpisania treści Płatności",
+	    "type": "text",
+	    "rank":"12",
+	    "category":"formularz",
+	    "template_access": ["bonyUpominkowe"]
+	},
+	{
+		"name": "platnosc_migx_tv",
+		"caption": "Płatnosc opcje",
+		"type": "migx",
+		 "rank":"13",
+		"category": "formularz",
+		"template_access": ["bonyUpominkowe"],
+		"input_properties": {
+			"formtabs":[
+						{
+						"caption": "Dostawa opcje",
+						"fields": [
+
+									{
+									"field": "text1",
+									"caption": "Nagłówek",
+									"inputTVtype": "image-desc"
+									},
+									{
+									"field": "text2",
+									"caption": "Treść maila",
+									"inputTVtype": "richtext"
+									}
+								]
+						}
+					],
+		     "columns":[
+
+						{
+						"header": "Nagłówek",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "text1"
+						},
+						{
+						"header": "Treść",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "text2"
+						}
+					],
+			"btntext": "Dodaj dostawe",
+			"autoResourceFolders": "false"
+		}
+	},
+	{
+	    "name": "trescWstepu",
+	    "caption": "Tekst wstępny w mailu",
+	    "type": "richtext",
+	    "rank":"14",
+	    "category":"formularz",
+	    "template_access": ["bonyUpominkowe"]
+	},
+	{
+	    "name": "stopkaMaila",
+	    "caption": "Treść na końcu maila",
+	    "type": "richtext",
+	    "rank":"14",
+	    "category":"formularz",
+	    "template_access": ["bonyUpominkowe"]
+	},
+	{
+	    "name": "thankyouMail",
+	    "caption": "Podziekowanie po wysłaniu emaila",
+	    "type": "richtext",
+	    "rank":"15",
+	    "category":"formularz",
+	    "template_access": ["bonyUpominkowe"]
+	},
+
+
+
+
+		{
+		"name": "nowosci_kafelki_tv",
+		"caption": "kafelki",
+		"type": "migx",
+		"rank":"1",
+		"category": "Kafelki",
+		"template_access": ["nowosci"],
+		"input_properties": {
+			"formtabs":[
+						{
+						"caption": "ZDJECIA",
+						"fields": [
+									{
+									"field": "image",
+									"caption": "Zdjęcie",
+									"description":"550x400",
+									"inputTVtype": "image",
+									"sourceFrom":"migx"
+									},
+
+									{
+									"field": "text1",
+									"caption": "Nagłówek",
+									"inputTVtype": "text"
+									},
+									{
+									"field": "text3",
+									"caption":"font awesome np. 'fa-lightbulb-o'",
+									"inputTVtype": "text"
+									},
+									{
+									"field": "text1new",
+									"caption":"Tekst pod ikona",
+									"inputTVtype": "text"
+									},
+
+									{
+									"field": "text2",
+									"caption": "Opis",
+									"inputTVtype": "richtext"
+									},
+
+									{
+									"field": "text4",
+									"caption": "wiecej tekst",
+									"inputTVtype": "text"
+									},
+									{
+									"field": "link",
+									"caption": "Link",
+									"description":" - jezeli link jest pusty nie wyświetla się przycisk ",
+									"inputTVtype": "text"
+									}
+
+
+								]
+						}
+					],
+		     "columns":[
+						{
+						"header": "Zdjęcie",
+						"width": "100",
+						"sortable": "false",
+						"dataIndex": "image",
+						"renderer": "this.renderImage"
+						},
+						{
+						"header": "Nagłówek",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "text1"
+						},
+						{
+						"header": "Tekst pod ikona",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "text1new"
+						},
+						{
+						"header": "Opis",
+						"width": "300",
+						"sortable": "false",
+						"dataIndex": "text2"
+						}
+					],
+			"btntext": "Dodaj Kafelek",
+			"autoResourceFolders": "false"
+		}
+	},
+
+
+
+	{
+	    "name": "kontakt_text",
+	    "caption": "Dane kontaktowe",
+	    "type": "richtext",
+	    "rank":"1",
+	    "category":"Ustawienia",
+	    "template_access": ["kontakt"]
+	},
+	{
+	    "name": "kontakt_email",
+	    "caption": "Email z formularza",
+	    "type": "text",
+	    "rank":"2",
+	    "category":"Ustawienia",
+	    "template_access": ["kontakt"]
+	},
+
+	{
+	    "name": "mapa_lat_tv",
+	    "caption": "Lat",
+	    "type": "text",
+	    "rank":"1",
+	    "category":"Mapa",
+	    "template_access": ["kontakt"]
+	},
+	{
+	    "name": "mapa_long_tv",
+	    "caption": "Long",
+	    "type": "text",
+	    "rank":"2",
+	    "category":"Mapa",
+	    "template_access": ["kontakt"]
+	},
+	{
+	    "name": "mapa_Tytul_tv",
+	    "caption": "tytul",
+	    "type": "text",
+	    "rank":"3",
+	    "category":"Mapa",
+	    "template_access": ["kontakt"]
+	},
+	{
+	    "name": "mapa_Opis_tv",
+	    "caption": "opis",
+	    "type": "richtext",
+	    "rank":"4",
+	    "category":"Mapa",
+	    "template_access": ["kontakt"]
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]

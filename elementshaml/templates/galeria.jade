@@ -1,0 +1,34 @@
+[[$header]]
+[[$nav]]
+
+
+
+//-SLIDER
+[[$sliderMain]]
+//- galeria
+
+section
+	.content
+		.title_galeriahome
+			h2.turkus GALERIA
+
+		.galeria_home_wrapper
+			[[getImageList?
+			&tvname=`galeriaMigx`
+			&tpl=`@CODE:
+			.imgGal(data-src="[[+image]]")
+				img(src="/assets/addons/timthumb.php?src=[[+image]]&w=370&h=235&zc=1&q=100&s=1", alt="galeria PRESTIZ")
+			| `
+			&docid=`[[*id]]`
+			&where=`{"published":"1"}`
+			]]
+
+
+
+//- section(style="height:1000px")
+section
+	.liscie_wrapper.prawa
+		.liscie
+			img(src="/MEDIA/SITEFILES/liscie.png", alt="PRESTIZ liście")
+[[$footerChunk]]
+[[$footer]]

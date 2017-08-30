@@ -1,0 +1,34 @@
+| [[$header]]
+| [[$nav]]
+
+
+
+//-SLIDER
+| [[$sliderMain]]
+//- sciezka okruszkow====================
+section
+	.content
+		.path
+			| [[Breadcrumbs? &crumbSeparator=`>>`]]
+//- liscie
+section
+	.liscie_wrapper.prawa.onas
+		.liscie
+			img(src="/MEDIA/SITEFILES/liscie.png", alt="PRESTIZ liście")
+//-kafelki duze =====================
+section
+	.content
+		.kafelki_wrapper.oferta_kaf.nowosci.
+			[[getImageList?
+			&tvname=`nowosci_kafelki_tv`
+			&tpl=`kafelek1nowosci`
+			&limit=`0
+			&docid=`[[*id]]`
+			]]
+
+section
+	.liscie_wrapper
+		.liscie
+			img(src="/MEDIA/SITEFILES/liscie-2.png", alt="PRESTIZ liście")
+| [[$footerChunk]]
+| [[$footer]]

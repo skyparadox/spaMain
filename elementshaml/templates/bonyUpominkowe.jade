@@ -1,0 +1,214 @@
+| [[$header]]
+| [[$nav]]
+
+
+
+//-SLIDER
+| [[$sliderMain]]
+//- sciezka okruszkow====================
+section
+	.content
+		.path
+			| [[Breadcrumbs? &crumbSeparator=`>>`]]
+//- //-opis=====================
+section
+	.content.onas.zbiorczy.bony
+		.zespol_gora(class="liczba-01")
+
+			.kafelek_liczba
+				span.liczba 01
+				.kafelek_title
+					span [[*pagetitle]]
+				.line1.line
+
+		.zespol_opis
+			span [[*onas_text3_tv]]
+//- kupon
+.content
+	.kuponIMg
+		.img2
+			img(src="/MEDIA/SITEFILES/bon2.png", alt="PRESTIZ kupon")
+		.img1
+			img(src="/MEDIA/SITEFILES/bon.png", alt="PRESTIZ kupon")
+//- formularz
+.content
+	.formularzTabsMain_wrapper
+		.formularzBony_tabs
+			.formularzBony_tab.active(data-ktorytab=".bonUpominkowy")
+				span Bon upominkowy
+			.formularzBony_tab(data-ktorytab=".bonkwotowy")
+				span Bon kwotowy
+		//- bon upominkowy
+		.formularzBony_wrapper.bonUpominkowy.active
+			//- tabs
+
+			//- formularz===============================
+			.container-formularz(class="liczba-02")
+				.container-form-wrap
+					form.formularz(name="formularzyk" action="javascript:;" method="post" autocomplete="off" enctype="multipart/form-data")
+						input.staticData(type="hidden" name="myemail" value="[[*mailform]]" )
+						input.staticData(type="hidden" name="bonType" value="1" )
+						input.staticData(type="hidden" name="mysubject" value="PRESTIŻ zamówienie nr " )
+						input.input.kwotaInputBon2(type="hidden" name="kwotaBonKwot")
+						.input_wrapp
+							.bon
+								.bon_selected_wrap
+
+								.select-override.bon
+									input.select-override__inputHere(type="hidden"  name="select-override-bon" placeholder="[[*trescBonu]]" required)
+									input.text-input.select-override__input(type="text"  name="select-override-bon-wrap" placeholder="[[*trescBonu]]")
+									.fa_wrap
+										.i.fa.fa-caret-down.close.turkus
+										.i.fa.fa-caret-up.open.turkus
+									.select-override__option-wrap
+										| [[getImageList?
+										| &tvname=`bon_migx_tv`
+										| &tpl=`bonyDropDown`
+										| &docid=`[[*id]]`
+										| ]]
+							.imie.halfInputs
+								input.input(type="text" name="name" placeholder="[[*imienazw]]" required)
+								input.input(type="text" name="nameobda" placeholder="[[*imienazwOBDA]]" required)
+							.mail.halfInputs
+								input.input(type="email" name="email" placeholder="[[*emailtext]]" required )
+								input.input(type="number" name="phone" placeholder="[[*phoneOBDA]]" required)
+							.platnosc.halfInputs
+								.select-override.platno
+									input.hiddenPayText(type="hidden" name="paymanetText")
+									input.text-input.select-override__input(type="text"  name="select-override-platnosc" placeholder="[[*trescPlatnosci]]" required)
+									.fa_wrap
+										.i.fa.fa-caret-down.close.turkus
+										.i.fa.fa-caret-up.open.turkus
+									.select-override__option-wrap
+										| [[getImageList?
+										| &tvname=`platnosc_migx_tv`
+										| &tpl=`@CODE:
+										.select-override__option(data-trescmail="[[+text2]]")
+											span [[+text1]]
+
+										| `
+										| &docid=`[[*id]]`
+										| ]]
+
+								.select-override.wysylka
+									input.text-input.select-override__input(type="text"  name="select-override-wysylka" placeholder="[[*trescDostawy]]" required)
+									input.text-input.select-override__inputtresc(type="hidden"  name="select-override-wysylka-tresc" placeholder="[[*trescDostawy]]" required)
+									.fa_wrap
+										.i.fa.fa-caret-down.close.turkus
+										.i.fa.fa-caret-up.open.turkus
+									.select-override__option-wrap
+										| [[getImageList?
+										| &tvname=`dostawa_tv`
+										| &tpl=`@CODE:
+										.select-override__option(data-kwota="[[+text2]]" data-textdostawy="[[+text3]]")
+											span [[+text1]]
+											span &nbsp;[[+text2]] zł
+										| `
+										| &docid=`[[*id]]`
+										| ]]
+
+							.tresc(data-textareaplace="[[*tresctext]]")
+								//- textarea.input(class="czcionka" name="message"  placeholder="[[*tresctext]]" required )
+						.formFooter_wrap
+							input.kwotaHidd(type="hidden" name="kwota")
+							.button-container.buttony
+								div
+
+
+								.button-send
+									.kwota
+										.linesend
+									.subW
+										input.submit(type="submit" value="[[*wyslijbutt]]")
+
+						.success.hide
+							| [[*thankyouMail]]
+							i.fa.fa-times.theX
+
+		//- bon kwotowy
+		.formularzBony_wrapper.bonkwotowy
+			//- tabs
+
+			//- formularz===============================
+			.container-formularz
+				.container-form-wrap
+					form.formularz(name="formularzyk" action="javascript:;" method="post" autocomplete="off" )
+						input.staticData(type="hidden" name="bonType" value="2" )
+						input.staticData(type="hidden" name="myemail" value="[[*mailform]]" )
+						input.staticData(type="hidden" name="mysubject" value="PRESTIŻ zamówienie nr " )
+						.input_wrapp
+							.bon.halfInputs
+								input.input.kwotaInputBon2(type="number" name="kwotaBonKwot" placeholder="[[*kwotabon]]*" required min="[[*minkwotabon]]")
+								.input
+									span.rozowy * minimalna kwota [[*minkwotabon]] PLN
+							.imie.halfInputs
+								input.input(type="text" name="name" placeholder="[[*imienazw]]" required)
+								input.input(type="text" name="nameobda" placeholder="[[*imienazwOBDA]]" required)
+							.mail.halfInputs
+								input.input(type="email" name="email" placeholder="[[*emailtext]]" required )
+								input.input(type="number" name="phone" placeholder="[[*phoneOBDA]]" required)
+							.platnosc.halfInputs
+								.select-override.platno
+									input.hiddenPayText(type="hidden" name="paymanetText")
+									input.text-input.select-override__input(type="text"  name="select-override-platnosc" placeholder="[[*trescPlatnosci]]" required)
+									.fa_wrap
+										.i.fa.fa-caret-down.close.turkus
+										.i.fa.fa-caret-up.open.turkus
+									.select-override__option-wrap
+										| [[getImageList?
+										| &tvname=`platnosc_migx_tv`
+										| &tpl=`@CODE:
+										.select-override__option(data-trescmail="[[+text2]]")
+											span [[+text1]]
+
+										| `
+										| &docid=`[[*id]]`
+										| ]]
+
+								.select-override.wysylka
+									input.text-input.select-override__input(type="text"  name="select-override-wysylka" placeholder="[[*trescDostawy]]" required)
+									input.text-input.select-override__inputtresc(type="hidden"  name="select-override-wysylka-tresc" placeholder="[[*trescDostawy]]" required)
+									.fa_wrap
+										.i.fa.fa-caret-down.close.turkus
+										.i.fa.fa-caret-up.open.turkus
+									.select-override__option-wrap
+										| [[getImageList?
+										| &tvname=`dostawa_tv`
+										| &tpl=`@CODE:
+										.select-override__option(data-kwota="[[+text2]]" data-textdostawy="[[+text3]]")
+											span [[+text1]]
+											span &nbsp;[[+text2]] zł
+										| `
+										| &docid=`[[*id]]`
+										| ]]
+
+							.tresc(data-textareaplace="[[*tresctext]]")
+								//- textarea.input(class="czcionka" name="message"  placeholder="[[*tresctext]]" required)
+						input.kwotaHidd(type="hidden" name="kwota")
+						.formFooter_wrap
+							.button-container.buttony
+
+								div
+
+
+								.button-send
+									.kwota
+										.linesend
+									.subW
+										input.submit(type="submit" value="[[*wyslijbutt]]")
+
+						.success.hide
+							| [[*thankyouMail]]
+							i.fa.fa-times.theX
+
+
+section
+	.liscie_wrapper.prawa
+		.liscie
+			img(src="/MEDIA/SITEFILES/liscie.png", alt="PRESTIZ liście")
+//- section
+//- 	.liscie_wrapper.kwiatki
+//- 		.liscie
+//- 			img(src="/MEDIA/SITEFILES/kwiatki.png", alt="PRESTIZ liście")
+| [[$footerChunk]]
+| [[$footer]]

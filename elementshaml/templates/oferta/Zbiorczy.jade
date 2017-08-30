@@ -1,0 +1,59 @@
+| [[$header]]
+| [[$nav]]
+
+
+
+//-SLIDER
+| [[$sliderMain]]
+
+//- sciezka okruszkow====================
+section
+	.content
+		.path
+			| [[Breadcrumbs? &crumbSeparator=`>>`]]
+//- //-opis=====================
+section
+	.content.onas.zbiorczy(class="liczba-01")
+		.zespol_gora
+			.platekWrap
+				img(src="/MEDIA/SITEFILES/platek.png", alt="PRESTIZ płatek")
+			.kafelek_liczba
+				span.liczba 01
+				.kafelek_title
+					span [[*pagetitle]]
+				.line1.line
+				.line2.line
+			.zespol_opis
+				span [[*onas_text3_tv]]
+
+
+
+//-kafelki duze =====================
+
+
+section
+
+	.zbiorczy_kafelki
+		.zbiorczy_kafelki_w.
+			[[getResources:default='Nothing found'?
+			&tpl=`kafelekZbiorczy`
+			&includeContent=`0`
+			&showUnpublished=`0`
+			&parents=`[[*id]]`
+			&includeTVs=`1`
+			&limit=`0`
+			&depth=`0`
+			&tvPrefix=``
+			&showHidden=`1`
+			&sortby=`menuindex`
+			&sortdir=`ASC`
+			]]
+
+
+
+
+
+//- section(style="height:1000px")
+
+| [[$footerChunk]]
+| [[$footer]]
